@@ -26,7 +26,22 @@
     +bold
   &__text
     font-size: 13px
-@media (max-width:1098px)
+@media (max-width:991px)
   .work-step__block
+    max-width: 33%
+    margin-bottom: 20px
     &::before
       display: none
+@media (max-width:768px)
+  .work-step__block
+    max-width: 50%
+  .step__text
+    width: 70%
+    margin: auto  
+@media (max-width:576px)
+  .work-step__block
+    max-width: 100%
+    margin: auto 
+    margin-bottom: 30px
+  .step__text
+    width: 70%    
