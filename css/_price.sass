@@ -57,7 +57,7 @@
   .gallery__block
    flex-basis: 34%
   .gallery__blocks
-   justify-content: space-around    
+   justify-content: space-around
   .price
     &__block
       flex-basis: 34%
@@ -65,8 +65,10 @@
       flex-wrap: wrap
       justify-content: space-around
 @media (max-width:576px)
-  .price-wrap__row
-    flex-direction: column
+  .price-wrap
+    &__row
+     flex-direction: column
+    &__useful
+     font-size: 18px 
   .gallery__block
     flex-basis: 51%
-    
