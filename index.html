@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фабрика Скинали</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
   </head>
   <body>
     <header class="header">
@@ -345,6 +346,41 @@
           <!-- /.work-step -->
         </div>
       </section>
+
+      <section class="section before">
+        <div class="container">
+          <h2 class="main__title">ДО И ПОСЛЕ</h2>
+          <!-- /.main__title -->
+          <div class="before-slider">
+
+            <div class="before-slider__wrap">
+              <div class="before-slider__item">
+                <img src="img/before.png" alt="">
+                <img src="img/after.png" alt="">
+              </div>
+              <div class="before-slider__item">
+                <img src="img/before.png" alt="">
+                <img src="img/after.png" alt="">
+              </div>
+              <div class="before-slider__item">
+                <img src="img/before.png" alt="">
+                <img src="img/after.png" alt="">
+              </div>
+            </div>
+            <!-- /.before-slider__wrap -->
+            
+            <div class="before-slider__arrow">
+              <img class="before__left" src="img/left.png" alt="">
+              <img class="before__right" src="img/right.png" alt="">
+            </div>
+          </div>
+          <!-- /.before-slider -->
+
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section before -->
+
       <section class="section reviews">
         <div class="container">
           <h2 class="main__title">Отзывы наших клиентов</h2>
@@ -453,9 +489,9 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
           <span class="footer-contacts__phone">+7 499 123-45-67</span>
           <span class="footer-contacts__mail">5404177@mail.ru</span>
           <span class="footer-contacts__icon">
-            <img src="img/footer-icon-1.png" alt="">
-            <img src="img/footer-icon-2.png" alt="">
-            <img src="img/footer-icon-3.png" alt="">
+            <a href="https://twitter.com/?lang=ru"> <img src="img/footer-icon-1.png" alt=""></a>
+            <a href="https://www.facebook.com/"> <img src="img/footer-icon-2.png" alt=""></a>
+            <a href="http//vk.com"> <img src="img/footer-icon-3.png" alt=""></a>
           </span>
         </div>
         <!-- /.footer-contacts -->
@@ -463,6 +499,23 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" charset="utf-8"></script>
+    <script src="js/jquery.twentytwenty.js" charset="utf-8"></script>
+    <script src="js/slick.min.js" charset="utf-8"></script>
+    <script src="js/jquery.event.move.js" charset="utf-8"></script>
+    <script type="text/javascript">
+     $(window).load(function() {
+       $(".before-slider__item").twentytwenty({
+         before_label: 'Без скинали', // Set a custom before label
+         after_label: 'Со скинали', // Set a custom after label
+       });
+       $('.before-slider__wrap').slick({
+        draggable: false,
+        dots: true
+      });
+
+     });
+    </script>
     <!-- <script type="text/javascript" src="https://spikmi.com/Widget?Id=1105"></script> -->
   </body>
 </html>
