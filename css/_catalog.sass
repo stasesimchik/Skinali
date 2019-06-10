@@ -10,6 +10,8 @@
   &__block
     flex-basis: 49%
     margin-bottom: 20px
+    &:hover .catalog__buttons
+      transform: scaleY(1)
   &__image
     width: 100%
   &__card
@@ -44,6 +46,8 @@
     position: absolute
     bottom: 10px
     right: 0
+    transform: scaleY(0)
+    transition: 0.5s
   &__button
     width: 350px
     height: 70px
@@ -55,7 +59,7 @@
 @media (max-width:991px)
   .catalog
     &__tag
-     bottom: 50px 
+     bottom: 50px
 @media (max-width:768px)
   .catalog
     &__blocks
@@ -64,11 +68,9 @@
       flex-basis: 100%
     &__tag
       bottom: 90px
-@media (max-width:600px) 
+@media (max-width:600px)
   .catalog
     &__tag
      display: none
     &__button
-      width: 80%  
-
-
+      width: 80%

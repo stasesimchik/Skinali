@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="navbar">
-        <div class="menu menu_active">
+        <div id="menu" class="menu menu_active">
           <div class="container">
             <nav class="menu__nav">
               <a class="menu__link" href="#">ГЛАВНАЯ</a>
@@ -27,7 +27,7 @@
         <!-- /.menu -->
         <div class="container">
           <div class="navbar__wrap">
-            <button class="menu-button">
+            <button id="menu-btn" class="menu-button">
                <span class="menu-button__line"></span>
                <span class="menu-button__line"></span>
                <span class="menu-button__line"></span>
@@ -57,11 +57,11 @@
           <div class="hero__text">
             <h1>Гарантия <br>минимальной цены<br>на скинали</h1>
             <strong class="hero__price" >от 3 000 р/м2</strong>
-            <button class="hero__button button_blue">Заказать скинали</button>
+            <a href="#request"> <button class="hero__button button_blue">Заказать скинали</button></a>
           </div>
         </div>
 
-          <section class="request">
+          <section id="#request" class="request">
             <div class="container request__wrap">
               <div class="request__form">
                 <h2 class="request__title" >ОСТАВЬТЕ ЗАЯВКУ НА РАСЧЕТ</h2>
@@ -69,6 +69,8 @@
                 <div class="request__row">
                   <p> <label for="list">Вид стекла</label><br>
                   <select class="request__list" name="list">
+                    <option value="">С печатью</option>
+                    <option value="">Без печати</option>
 
                   </select></p>
                   <p><label for="width">Ширина,см</label><br>
@@ -248,13 +250,13 @@
             </div>
               <!-- /.price-wrap__row -->
             <div class="price-wrap__row price__blocks">
-                <div class="price__block"><img class="price__image" src="img/useful-1.png" alt=""><span>Виды стекла</span> </div>
+                <a href="#"><div class="price__block"><img class="price__image" src="img/useful-1.png" alt=""><span>Виды стекла</span> </div></a>
                 <!-- /.price__block -->
-                <div class="price__block"><img class="price__image" src="img/useful-2.png" alt="" ><span>Виды печати</span> </div>
+                <a href="#"><div class="price__block"><img class="price__image" src="img/useful-2.png" alt="" ><span>Виды печати</span> </div></a>
                 <!-- /.price__block -->
-                <div class="price__block"><img class="price__image" src="img/useful-3.png" alt="" ><span>Виды крепежа и монтажа</span> </div>
+                <a href="#"><div class="price__block"><img class="price__image" src="img/useful-3.png" alt="" ><span>Виды крепежа и монтажа</span> </div></a>
                 <!-- /.price__block -->
-                <div class="price__block"><img class="price__image" src="img/useful-4.png" alt="" ><span>Вопросы - Ответы</span> </div>
+                <a href="#"><div class="price__block"><img class="price__image" src="img/useful-4.png" alt="" ><span>Вопросы - Ответы</span> </div></a>
                 <!-- /.price__block -->
               </div>
               <!-- /.price-wrap__row price__blocks -->
@@ -368,11 +370,13 @@
               </div>
             </div>
             <!-- /.before-slider__wrap -->
-            
+
             <div class="before-slider__arrow">
-              <img class="before__left" src="img/left.png" alt="">
-              <img class="before__right" src="img/right.png" alt="">
+              <button class="before__left" type="button" name="button"> <img  src="img/left.png" alt=""></button>
+              <button class="before__right" type="button" name="button"><img  src="img/right.png" alt=""></button>
             </div>
+            <!-- /.before-slider__arrow -->
+
           </div>
           <!-- /.before-slider -->
 
@@ -499,6 +503,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
+    <script src="js/main.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" charset="utf-8"></script>
     <script src="js/jquery.twentytwenty.js" charset="utf-8"></script>
     <script src="js/slick.min.js" charset="utf-8"></script>
@@ -511,8 +516,11 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
        });
        $('.before-slider__wrap').slick({
         draggable: false,
-        dots: true
+        dots: true,
+        prevArrow: $('.before__left'),
+        nextArrow: $('.before__right'),
       });
+
 
      });
     </script>
