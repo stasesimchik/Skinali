@@ -521,6 +521,21 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
         nextArrow: $('.before__right'),
       });
 
+      $('.reviews-blocks').slick({
+       draggable: false,
+       arrows: false,
+       slidesToShow: 3,
+       responsive: [
+         {
+           breakpoint: 1010,
+           settings: {
+             slidesToShow: 1,
+             slidesToScroll: 1,
+             dots: true
+           }
+     }]
+     });
+
 
      });
     </script>
